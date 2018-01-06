@@ -29,7 +29,7 @@ Features, keypoints, and descriptors are stored in a VTK format.
 
 Alternatively, you can run the command line executables directly for each volume:
 
-````
+```
  cd 0009/4893
  ExtractFeatures 4978whole 4978whole_00.vtk
  ExtractKeypoints 4978whole_00.vtk 4978wholekeypoints.vtk
@@ -37,6 +37,7 @@ Alternatively, you can run the command line executables directly for each volume
  compute_distance_map 4978whole
  WatershedSegmentation1 4978whole 4978wholewatershed 2.0 10 0.001 0.10
 ```
+
 Repeat the steps for volume in 0009/4717. 
 
 # Step 2.  
