@@ -5,8 +5,9 @@ The code implements:
 
 Sofka, M., V. Stewart, C., 2010. [Location Registration and Recognition (LRR) for Serial Analysis of Nodules in Lung CT Scans](http://www.sofka.com/pdfs/sofka-mia10.pdf). Medical Image Analysis 14, 407–428.
 
-![LRR aligned](https://github.com/msofka/LRR/blob/master/LRR_aligned.png)
+<p align="center"><img align="center" src="https://github.com/msofka/LRR/blob/master/LRR_aligned.png" width="500"/></p>
 Figure: A panel of nine images for each result presented to an independent observer for the alignment evaluation. The rows show axial, coronal, and sagittal slices. The columns show mapped moving slices, fixed slices, and checkerboards alternating mapped moving and fixed slices. The features are superimposed onto the images.
+
 
 ### Build
 
@@ -17,6 +18,9 @@ CMake build system is recommended for creating make files and project files. CMa
 The algorithm components are run separately without including them in one executable. This makes the components easier to debug, evaluate, and integrate in other projects. The disadvantage is that data is loaded and saved multiple times. What follows are the steps to run the LRR algorithm. The steps consists of calling each executable from simple bash scripts (use directly in Linux or download Cygwin to use on Windows). In the scripts, you will need to modify path to your binaries. You can also run the executables directly (see below). 
 
 # Step 1: Feature Extraction
+
+Download example volume [here](http://www.cs.rpi.edu/~sofka/cgi-bin/downloadvw.cgi?volume_pair).
+
 Extract features, keypoints, and descriptors:
 
 ```
