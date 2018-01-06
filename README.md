@@ -1,3 +1,13 @@
+
+### Introduction
+
+The code implements:
+
+Sofka, M., V. Stewart, C., 2010. [Location Registration and Recognition (LRR) for Serial Analysis of Nodules in Lung CT Scans](http://www.sofka.com/pdfs/sofka-mia10.pdf). Medical Image Analysis 14, 407–428.
+
+![LRR aligned](https://github.com/msofka/LRR/blob/master/LRR_aligned.png)
+Figure: A panel of nine images for each result presented to an independent observer for the alignment evaluation. The rows show axial, coronal, and sagittal slices. The columns show mapped moving slices, fixed slices, and checkerboards alternating mapped moving and fixed slices. The features are superimposed onto the images.
+
 ### Build
 
 CMake build system is recommended for creating make files and project files. CMake files are included with the source code distribution.
