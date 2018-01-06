@@ -6,7 +6,7 @@ CMake build system is recommended for creating make files and project files. CMa
 
 The algorithm components are run separately without including them in one executable. This makes the components easier to debug, evaluate, and integrate in other projects. The disadvantage is that data is loaded and saved multiple times. What follows are the steps to run the LRR algorithm. The steps consists of calling each executable from simple bash scripts (use directly in Linux or download Cygwin to use on Windows). In the scripts, you will need to modify path to your binaries. You can also run the executables directly (see below). 
 
-# Step 1.  
+# Step 1: Feature Extraction
 Extract features, keypoints, and descriptors:
 
 ```
@@ -40,7 +40,7 @@ Alternatively, you can run the command line executables directly for each volume
 
 Repeat the steps for volume in 0009/4717. 
 
-# Step 2.  
+# Step 2: Initialization
 Generate initializations by keypoint indexing:
 
 ```
@@ -60,7 +60,7 @@ Running the executable directly:
 
 (Note: Images are specified for debugging purposes. They are not used in the algorithm.) 
 
-# Step 3.  
+# Step 3: Estimation
 Use the initializations generated in the previous step to refine the estimate and output the verified transform:
 
 ```
