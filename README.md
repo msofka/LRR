@@ -61,7 +61,7 @@ Generate initializations by keypoint indexing:
  ./invariant_indexing.bash pairs_with_nodules.txt
 ```
 
-This creates a directory ``nodules'' which contains: 1) moving and fixed descriptors for each match, 2) images surrounding fixed and moving keypoints, 3) the query location and its neighborhood within fixed image. 
+This creates a directory `nodules` which contains: 1) moving and fixed descriptors for each match, 2) images surrounding fixed and moving keypoints, 3) the query location and its neighborhood within fixed image. 
 
 Running the executable directly:
 
