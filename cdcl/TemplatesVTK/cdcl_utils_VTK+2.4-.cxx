@@ -1,0 +1,6 @@
+#include <cdcl/cdcl_utils_VTK.txx>
+
+CDCL_UTILS_VTK_INSTANTIATE( 2 );
+CDCL_UTILS_VTK_INSTANTIATE_DOF( 2, 4 );
+//CDCL_UTILS_IO_VTK_INSTANTIATE( 2 );
+

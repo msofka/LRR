@@ -1,0 +1,9 @@
+
+INCLUDE_DIRECTORIES( ${VXL_VGUI_INCLUDE_DIR} )
+IF( VXL_VGUI_FOUND )
+  ADD_EXECUTABLE(estimate estimate.cxx)
+  TARGET_LINK_LIBRARIES(estimate cdcl cdcl_display)
+
+ENDIF( VXL_VGUI_FOUND )
+
+
