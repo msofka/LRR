@@ -75,5 +75,5 @@ Running the executable directly:
  location_registration.exe 4893/4978whole 4717/4722whole \
  -trans 4893_4978whole-4717_4722wholediff.vtk \
  -matches 4893/4978nodules.txt -segment watershed
+ ```
 (Note: Images are specified for debugging purposes. They are not used in the algorithm.)
-```
