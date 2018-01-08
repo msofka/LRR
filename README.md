@@ -24,19 +24,19 @@ Download example volume [here](http://www.cs.rpi.edu/~sofka/cgi-bin/downloadvw.c
 Extract features, keypoints, and descriptors:
 
 ```
- ./extract_features.bash volumes_with_nodules.txt
+$ ./extract_features.bash volumes_with_nodules.txt
 ```
 
 The script also calls a script that computes a Voronoi map for each feature set:
 
 ```
-./compute_distance_map.bash volumes_with_nodules.txt
+$ ./compute_distance_map.bash volumes_with_nodules.txt
 ```
 
 In addition, the script also computes watershed oversegmentations by running:
 
 ```
- ./watershed_segmentation.bash volumes_with_nodules.txt
+$ ./watershed_segmentation.bash volumes_with_nodules.txt
 ```
 
 Features, keypoints, and descriptors are stored in a VTK format.
@@ -44,12 +44,12 @@ Features, keypoints, and descriptors are stored in a VTK format.
 Alternatively, you can run the command line executables directly for each volume:
 
 ```
- cd 0009/4893
- ExtractFeatures 4978whole 4978whole_00.vtk
- ExtractKeypoints 4978whole_00.vtk 4978wholekeypoints.vtk
- ComputeDescriptors 4978wholekeypoints.vtk 4978whole_00.vtk 4978wholedesc.vtk
- compute_distance_map 4978whole
- WatershedSegmentation1 4978whole 4978wholewatershed 2.0 10 0.001 0.10
+$ cd 0009/4893
+$ ExtractFeatures 4978whole 4978whole_00.vtk
+$ ExtractKeypoints 4978whole_00.vtk 4978wholekeypoints.vtk
+$ ComputeDescriptors 4978wholekeypoints.vtk 4978whole_00.vtk 4978wholedesc.vtk
+$ compute_distance_map 4978whole
+$ WatershedSegmentation1 4978whole 4978wholewatershed 2.0 10 0.001 0.10
 ```
 
 Repeat the steps for volume in 0009/4717. 
@@ -58,7 +58,7 @@ Repeat the steps for volume in 0009/4717.
 Generate initializations by keypoint indexing:
 
 ```
- ./invariant_indexing.bash pairs_with_nodules.txt
+$ ./invariant_indexing.bash pairs_with_nodules.txt
 ```
 
 This creates a directory `nodules` which contains: 1) moving and fixed descriptors for each match, 2) images surrounding fixed and moving keypoints, 3) the query location and its neighborhood within fixed image. 
@@ -66,8 +66,8 @@ This creates a directory `nodules` which contains: 1) moving and fixed descripto
 Running the executable directly:
 
 ```
- cd 0009
- indexing_one_descriptor.exe 4717/4722wholedesc.vtk 4893/4978wholedesc.vtk \
+$ cd 0009
+$ indexing_one_descriptor.exe 4717/4722wholedesc.vtk 4893/4978wholedesc.vtk \
   -mov 4717/4722whole -fix 4893/4978whole \
   -trans 4893_4978whole-4717_4722wholediff.vtk -locs  4893/4978nodules.txt
 ```
@@ -78,16 +78,16 @@ Running the executable directly:
 Use the initializations generated in the previous step to refine the estimate and output the verified transform:
 
 ```
- ./location_registration.bash pairs_with_nodules.txt
+$ ./location_registration.bash pairs_with_nodules.txt
 ```
 
 This creates a directory ``nodulesreg'' that contains: 1) a text file with the final estimated transform and various statistics, and 2) a transform and its inverse in VTK format. If LAST_ITER is defined as 1 in the code, the executable will also produce a panel of 9 images containing fixed, moving, and checkerboard images of axial, sagittal, and coronal slices. 
 Running the executable directly:
 
 ```
- cd 0009     
- location_registration.exe 4893/4978whole 4717/4722whole \
- -trans 4893_4978whole-4717_4722wholediff.vtk \
- -matches 4893/4978nodules.txt -segment watershed
+$ cd 0009     
+$ location_registration.exe 4893/4978whole 4717/4722whole \
+  -trans 4893_4978whole-4717_4722wholediff.vtk \
+  -matches 4893/4978nodules.txt -segment watershed
  ```
 (Note: Images are specified for debugging purposes. They are not used in the algorithm.)
