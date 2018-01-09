@@ -1,7 +1,7 @@
 
 ### Introduction
 
-The code implements:
+This code has been moved from the [author's website](http://www.sofka.com/projects/lrr_src/) on 01/05/2018. The counter showed that it had been downloaded 927 times. The code implements:
 
 Sofka, M., V. Stewart, C., 2010. [Location Registration and Recognition (LRR) for Serial Analysis of Nodules in Lung CT Scans](http://www.sofka.com/pdfs/sofka-mia10.pdf). Medical Image Analysis 14, 407–428.
 
